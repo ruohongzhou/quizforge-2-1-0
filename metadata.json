@@ -1,0 +1,5 @@
+{
+  "name": "QuizForge AI - Synthesis 2.1.0",
+  "description": "Professional MCQ, FITB, and Thesis synthesis suite. Features unified grading status tracking, global repetition avoidance, and robust error handling for API constraints.",
+  "requestFramePermissions": []
+}
