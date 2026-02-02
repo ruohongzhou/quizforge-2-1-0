@@ -95,6 +95,13 @@
 </head>
 <body>
     <div id="root"></div>
+    <script type="module">
+      // This 'bridge' maps the URLs to names Babel can understand
+      import * as React from 'react';
+      import * as ReactDOM from 'react-dom/client';
+      window.React = React;
+      window.ReactDOM = ReactDOM;
+    </script>
     <script src="https://unpkg.com/@babel/standalone@7.24.0/babel.min.js"></script>
     <script 
       type="text/babel" 
