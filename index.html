@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizForge AI - Professional Study Suite</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -92,9 +91,19 @@
   }
 }
 </script>
+
 </head>
 <body>
     <div id="root"></div>
-    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+      window.babelConfig = {
+        presets: [
+          ['env', { modules: false, targets: { esmodules: true } }],
+          ['react', { runtime: 'automatic' }]
+        ]
+      };
+    </script>
+    <script type="text/babel" data-presets="env,react" src="./index.tsx"></script>
 </body>
 </html>
