@@ -95,15 +95,12 @@
 </head>
 <body>
     <div id="root"></div>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script>
-      window.babelConfig = {
-        presets: [
-          ['env', { modules: false, targets: { esmodules: true } }],
-          ['react', { runtime: 'automatic' }]
-        ]
-      };
+    <script src="https://unpkg.com/@babel/standalone@7.24.0/babel.min.js"></script>
+    <script 
+      type="text/babel" 
+      data-presets="typescript,react" 
+      data-plugins="transform-modules-umd"
+      src="./index.tsx">
     </script>
-    <script type="text/babel" data-presets="env,react" src="./index.tsx"></script>
 </body>
 </html>
